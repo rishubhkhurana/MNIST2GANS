@@ -1,0 +1,19 @@
+Experimentation--
+1. Tried several architectures-- VGG16,Resnet50, inceptionv3 and handcrafted resenet. Finally settled with handcrafted resnet. 
+2. Tried label smoothing on selected classes of age, emotion and weight. But no improvement was found
+3. Tried Mixup augmentation and somehow, in this problem, that turned out to be really bad. 
+4. Finally settled with augmentation using albumentations library
+5. created lr_finder and one cycle scheduler callbacks. 
+
+
+Final validation accuracy achieved
+
+{'age_output_accuracy': 0.4254032373428345,
+ 'imagequality_output_accuracy': 0.5806451439857483,
+ 'emotion_output_accuracy': 0.7016128897666931,
+ 'carryingbag_output_accuracy': 0.6824596524238586,
+ 'weight_output_accuracy': 0.6537298560142517,
+ 'footwear_output_accuracy': 0.6844757795333862,
+ 'gender_output_accuracy': 0.9173387289047241,
+ 'bodypose_output_accuracy': 0.8684476017951965}
+
